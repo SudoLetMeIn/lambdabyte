@@ -1,0 +1,16 @@
+EXHAUSTIVE ARITHMETIC VERIFICATION
+The lambda definitions are identical after renaming COOKED to HAS_FAULT.
+The earlier exhaustive verification therefore applies to this arithmetic core.
+
+All 256 numerals and 2,048 bit probes passed.
+ADD: 65536 pairs, byte and both flags passed.
+SUB: 65536 pairs, byte and both flags passed.
+MUL: 65536 pairs, byte and both flags passed.
+PASS: 198940 checks in 97.10 seconds.
+
+NORMAL-SYNTAX REGRESSION VERIFICATION
+All 256 numerals and 2,048 bit probes passed.
+ADD: 289 pairs, byte and both flags passed.
+SUB: 289 pairs, byte and both flags passed.
+MUL: 289 pairs, byte and both flags passed.
+PASS: 3209 checks in 1.23 seconds.

@@ -1,0 +1,6 @@
+# This is Omega: an expression that cannot terminate when demanded.
+let omega = fun x -> x(x);
+
+# Call-by-need never evaluates the ignored argument.
+print (fun ignored -> 7)(omega(omega));
+print if true then 42 else omega(omega);

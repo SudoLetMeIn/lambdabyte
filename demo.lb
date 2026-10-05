@@ -1,0 +1,25 @@
+# Decimal and binary literals represent the same eight-bit words.
+let one = 1;
+let two = 0b00000010;
+print one + two;
+print 13 * 7;
+
+# Carry, borrow, signed overflow, and multiplication truncation.
+print 255 + 1;
+print 2 - 5;
+print 127 + 1;
+print 16 * 16;
+
+# A negative literal is a two's-complement word, with no initial fault.
+print -1 * 1;
+print -128 * -1;
+
+# Earlier arithmetic faults remain visible.
+let disaster = 255 + 1;
+print disaster + 0;
+print has_fault(disaster);
+
+# Functions and lazy branches are ordinary lambda calculus.
+let increment = fun x -> x + 1;
+print increment(41);
+print if is_zero(0) then 7 else 9;
