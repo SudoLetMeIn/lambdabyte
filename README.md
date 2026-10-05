@@ -181,6 +181,26 @@ evaluation budget; the default is 2,000,000 evaluator/readback transitions.
 - Flags record arithmetic history, not a source-location trace. Predicates and
   branch selection do not propagate predicate history automatically.
 
+## MiniByte calculator
+
+[MiniByte](minibyte/) is the smaller, standalone Scala calculator in this repository.
+It accepts two unsigned byte values and one operator (`+`, `-`, or `*`), then prints
+the computed lambda numeral, binary, and decimal result:
+
+```sh
+java -jar minibyte/minibyte.jar 6 + 7
+java -jar minibyte/minibyte.jar 0b110 + 0b111
+java -jar minibyte/minibyte.jar 6 '*' 7
+```
+
+```text
+λs0.λs1.λs2.λs3.λs4.λs5.λs6.λs7.λx. s4 (s5 (s7 x)) 0b1101 13
+```
+
+Results wrap modulo 256; unsigned overflow/underflow notices go to stderr.
+MiniByte has no variables, compound expressions, or signed-overflow detection.
+See its [README](minibyte/README.md) for the launcher, source build, and tests.
+
 ## Files
 
 - `src/LambdaByte.scala`: complete implementation.
