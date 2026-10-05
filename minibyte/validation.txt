@@ -1,0 +1,11 @@
+MiniByte validation
+Scala 2.11.12, Java 17
+
+Exhaustive lambda evaluation against an independent native oracle:
++: 65536 input pairs; byte and unsigned fault passed.
+-: 65536 input pairs; byte and unsigned fault passed.
+*: 65536 input pairs; byte and unsigned fault passed.
+PASS: 196876 checks in 79.26 seconds.
+
+Packaged JAR regression: 1,036 checks passed.
+CLI: 12 contracts passed (exact output, stderr separation, input errors, definitions export).
